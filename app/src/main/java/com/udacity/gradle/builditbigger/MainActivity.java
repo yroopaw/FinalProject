@@ -14,9 +14,9 @@ import android.widget.Toast;
 import android.os.AsyncTask;
 
 import com.example.yusuf.myapplication.backend.myApi.MyApi;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+//import com.google.android.gms.ads.AdListener;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -88,7 +88,7 @@ public class MainActivity extends ActionBarActivity {
     public void tellJoke(View view){
         new EndpointsAsyncTask().execute();
       //yy  new EndpointsAsyncTask().execute(new Pair<Context, String>(this, null));
-       // jokeProvider myJoke = new jokeProvider();
+       // jokeProvider1 myJoke = new jokeProvider1();
        // String newJoke = myJoke.getJoke();
        // Toast.makeText(this, newJoke, Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(this, DisplayJokeActivity.class);
@@ -133,7 +133,7 @@ public class MainActivity extends ActionBarActivity {
 
 
             try {
-                return myApiService.sayHi().execute().getData();
+                return myApiService.randomJoke().execute().getData();
              //   return myApiService.sayHi(name).execute().getData();
             } catch (IOException e) {
                 return e.getMessage();

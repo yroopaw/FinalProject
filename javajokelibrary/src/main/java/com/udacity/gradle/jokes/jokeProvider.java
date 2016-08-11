@@ -4,12 +4,12 @@ package com.udacity.gradle.jokes;
 import java.util.Random;
 
 public class jokeProvider {
-    public String getJoke() {
+    public static String getJoke() {
       //  return "This is demo of Java Library Joke";
         return provideRandomJoke();
     }
 
-    public String provideRandomJoke() {
+    public static String provideRandomJoke() {
         //Returns a random joke
         String[] jokes = {
                 "He said 'I'm going to chop off the bottom of one of your trouser legs and put it in a library. ' I thought 'That's a turn-up for the books.",
